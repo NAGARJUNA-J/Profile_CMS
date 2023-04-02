@@ -1,45 +1,63 @@
-<mat-card>
-  <mat-card-title class="main-header">
-    <span> Business Details</span>
-  </mat-card-title>
-  <mat-card-content>
-    <mat-card>
-      <mat-card-title>
-        <div fxLayout="row">
-          <span> Profile</span>
-          <span fxLayoutAlign="space-around end"><button mat-flat-button color="warn" (click)="openEdit()">Edit
-              Profile</button></span>
-        </div>
-      </mat-card-title>
-      <mat-card-content>
-        <table>
-          <tbody>
-            <tr>
-              <td><b>Name:</b></td>
-              <td> {{profileData.name}}</td>
-            </tr>
-            <tr>
-              <td><b>Domain:</b></td>
-              <td> {{profileData.domain}}</td>
-            </tr>
-            <tr>
-              <td><b>Gender:</b></td>
-              <td> {{profileData.gender == 'M'?'Male':'Fe-male'}}</td>
-            </tr>
-            <tr>
-              <td><b>Date of Birth:</b></td>
-              <td> {{profileData.dob}}</td>
-            </tr>
-            <tr>
-              <td><b>Phone Number:</b></td><td>{{profileData.phone}}</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td><b>Location:</b></td><td>{{profileData.location}}</td>
-            </tr>
-          </tbody>
-        </table>
-      </mat-card-content>
-    </mat-card>
-  </mat-card-content>
-</mat-card>
+<div fxLayout="column" fxLayoutGap.xs="10px" fxLayoutGap.sm="10px">
+  <div fxLayout.gt-xs="row" fxLayout.xs="column" fxLayoutGap.xs="10px" fxLayoutGap.sm="10px">
+    <div fxFlex.gt-xs="25">
+      <mat-card>
+        <img src="../assets/njayamangala.jpeg" style="height: 100px;width: 100px;border-radius: 100%;"
+          ngClass.gt-xs="title" ngClass.xs="mobile-title">
+        <h3 ngClass.gt-xs="title" ngClass.xs="mobile-title"><b>{{profileData.name}}</b></h3>
+        <h3 ngClass.gt-xs="title" ngClass.xs="mobile-title">Premium member</h3>
+        <br>
+       <p ngClass.gt-xs="title" ngClass.xs="mobile-title" style="color: red">Sent an Email</p>
+      </mat-card>
+    </div>
+    <div fxFlex.gt-xs="75" fxLayoutGap.xs="10px" fxLayoutGap.sm="10px">
+      <mat-card>
+        <mat-card-title class="main-header">
+          <span style="padding-left: 20px;"> Business Details</span>
+        </mat-card-title>
+        <mat-card-content>
+          <mat-card>
+            <mat-card-title>
+              <div style="border-bottom: 1px solid;">
+                <span><mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon> Profile</span>
+                <span fxLayoutAlign="end"><button mat-flat-button color="warn" (click)="openEdit()" style="margin-bottom: 10px">Edit
+                    Profile</button></span>
+              </div>
+            </mat-card-title>
+            <mat-card-content>
+              <table>
+                <tbody>
+                  <tr>
+                    <td><b>Name:</b></td>
+                    <td> {{profileData.name}}</td>
+                  </tr>
+                  <tr>
+                    <td><b>Domain:</b></td>
+                    <td> {{profileData.domain}}</td>
+                  </tr>
+                  <tr>
+                    <td><b>Gender:</b></td>
+                    <td> {{profileData.gender == 'M'?'Male':'Fe-male'}}</td>
+                  </tr>
+                  <tr>
+                    <td><b>Date of Birth:</b></td>
+                    <td> {{profileData.dob}}</td>
+                  </tr>
+                  <tr>
+                    <td><b>Phone Number:</b></td>
+                    <td>{{profileData.phone}}</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><b>Location:</b></td>
+                    <td>{{profileData.location}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </mat-card-content>
+          </mat-card>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

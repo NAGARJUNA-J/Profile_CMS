@@ -1,0 +1,45 @@
+<mat-card>
+  <mat-card-title class="main-header">
+    <span> Business Details</span>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-card>
+      <mat-card-title>
+        <div fxLayout="row">
+          <span> Profile</span>
+          <span fxLayoutAlign="space-around end"><button mat-flat-button color="warn" (click)="openEdit()">Edit
+              Profile</button></span>
+        </div>
+      </mat-card-title>
+      <mat-card-content>
+        <table>
+          <tbody>
+            <tr>
+              <td><b>Name:</b></td>
+              <td> {{profileData.name}}</td>
+            </tr>
+            <tr>
+              <td><b>Domain:</b></td>
+              <td> {{profileData.domain}}</td>
+            </tr>
+            <tr>
+              <td><b>Gender:</b></td>
+              <td> {{profileData.gender == 'M'?'Male':'Fe-male'}}</td>
+            </tr>
+            <tr>
+              <td><b>Date of Birth:</b></td>
+              <td> {{profileData.dob}}</td>
+            </tr>
+            <tr>
+              <td><b>Phone Number:</b></td><td>{{profileData.phone}}</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><b>Location:</b></td><td>{{profileData.location}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </mat-card-content>
+</mat-card>

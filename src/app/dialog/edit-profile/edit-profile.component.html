@@ -1,0 +1,33 @@
+<div>
+    <div>
+        <h4>Edit Profile</h4>
+    </div>
+    <div>
+        <form [formGroup]="editForm">
+            <mat-form-field class="fullwidth">
+                <input matInput placeholder="Enter Name" id="firstname" formControlName="name" name="firstname">
+            </mat-form-field>
+            <mat-form-field class="fullwidth">
+                <input matInput placeholder="Enter Domain" id="domain" formControlName="domain" name="domain">
+            </mat-form-field>
+            <label>Gender :</label>
+            <mat-radio-group formControlName="gender">
+                <mat-radio-button [value]="'M'">Male</mat-radio-button>
+                <mat-radio-button [value]="'F'">Fe-male</mat-radio-button>
+            </mat-radio-group>
+            <br>
+            <br>
+            <label>Date of Birth : </label>
+            <input type="date" formControlName="dob">
+            <mat-form-field class="fullwidth">
+                <input matInput #postalCode maxlength="10" formControlName="phoneNo" placeholder="Ex. 94105"
+                    value="94043">
+            </mat-form-field>
+            <mat-form-field class="fullwidth">
+                <textarea matInput placeholder="Address" id="address" formControlName="location"
+                    name="address"></textarea>
+            </mat-form-field>
+        </form>
+        <button mat-raised-button color="primary" (click)="onCancel()">Update</button>
+    </div>
+</div>
